@@ -12,6 +12,7 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javax.swing.Icon;
 import javax.swing.JLabel;
+import static monopolist.Inicio.J4box;
 
 /**
  *
@@ -20,33 +21,148 @@ import javax.swing.JLabel;
 public class Tablero extends javax.swing.JFrame {
 
     Pintar P;
-    JLabel ficha1, ficha2;
+    JLabel ficha1, ficha2, ficha3, ficha4;
     int x, y;
     int d1, d2;
 
     //Objetos casilla
-    Casillas Go = new Casillas("Salida", 0, 0, 883, 750, 0);
+    Casillas Go = new Casillas("Salida", 0, 0, 887, 687, 0);
+    Casillas C1 = new Casillas("Old Kent Road", 60, 2, 780, 687, 1);
+    Casillas C2 = new Casillas("Community chest", 0, 0, 700, 687, 2);
     ListaTablero Tab = new ListaTablero();
 
     ;
 
     public Tablero() {
         initComponents();
+        Tab.addNode(Go);
+        Tab.addNode(C1);
+        Tab.addNode(C2);
+
         P = new Pintar(Panel.getSize(), 1);
         Panel.add(P);
 
         ficha1 = new JLabel();
         ficha2 = new JLabel();
+        ficha3 = new JLabel();
+        ficha4 = new JLabel();
+        Icon carrito = new javax.swing.ImageIcon(getClass().getResource("/imagenes/carrito.png"));
+        Icon barco = new javax.swing.ImageIcon(getClass().getResource("/imagenes/barco.png"));
+        Icon perrito = new javax.swing.ImageIcon(getClass().getResource("/imagenes/perrito.png"));
+        Icon sombrero = new javax.swing.ImageIcon(getClass().getResource("/imagenes/sombrero.png"));
 
-        ficha1.setBounds(10, 10, 23, 23);
-        ficha1.setBackground(Color.red);
+        ficha1.setBounds(867, 667, 25, 25);
+        String Select = Inicio.J1Ficha.getSelectedItem().toString();
+        if (null != Select) {
+            switch (Select) {
+                case "Rojo":
+                    ficha1.setBackground(Color.red);
+                    ficha1.setIcon(carrito);
+                    break;
+                case "Azul":
+                    ficha1.setBackground(Color.blue);
+                    ficha1.setIcon(barco);
+                    break;
+                case "Amarillo":
+                    ficha1.setBackground(Color.yellow);
+                    ficha1.setIcon(perrito);
+                    break;
+                case "Verde":
+                    ficha1.setBackground(Color.green);
+                    ficha1.setIcon(sombrero);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         ficha1.setOpaque(true);
 
-        ficha2.setBounds(10, 10, 23, 23);
-        ficha2.setBackground(Color.blue);
+        ficha2.setBounds(867, 707, 25, 25);
+        String Select2 = Inicio.J2Ficha.getSelectedItem().toString();
+        if (null != Select2) {
+            switch (Select2) {
+                case "Rojo":
+                    ficha2.setBackground(Color.red);
+                    ficha2.setIcon(carrito);
+                    break;
+                case "Azul":
+                    ficha2.setBackground(Color.blue);
+                    ficha2.setIcon(barco);
+                    break;
+                case "Amarillo":
+                    ficha2.setBackground(Color.yellow);
+                    ficha2.setIcon(perrito);
+                    break;
+                case "Verde":
+                    ficha2.setBackground(Color.green);
+                    ficha2.setIcon(sombrero);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         ficha2.setOpaque(true);
+        if (Inicio.J3box.isSelected()) {
+            ficha3.setBounds(907, 707, 25, 25);
+            String Select3 = Inicio.J3Ficha.getSelectedItem().toString();
+            if (null != Select3) {
+                switch (Select3) {
+                    case "Rojo":
+                        ficha3.setBackground(Color.red);
+                        ficha3.setIcon(carrito);
+                        break;
+                    case "Azul":
+                        ficha3.setBackground(Color.blue);
+                        ficha3.setIcon(barco);
+                        break;
+                    case "Amarillo":
+                        ficha3.setBackground(Color.yellow);
+                        ficha3.setIcon(perrito);
+                        break;
+                    case "Verde":
+                        ficha3.setBackground(Color.green);
+                        ficha3.setIcon(sombrero);
+                        break;
+                    default:
+                        break;
+                }
+                ficha3.setOpaque(true);
+                P.add(ficha3);
+            }
+        }
+        if (Inicio.J4box.isSelected()) {
+            ficha4.setBounds(907, 667, 25, 25);
+            String Select3 = Inicio.J4Ficha.getSelectedItem().toString();
+            if (null != Select3) {
+                switch (Select3) {
+                    case "Rojo":
+                        ficha4.setBackground(Color.red);
+                        ficha4.setIcon(carrito);
+                        break;
+                    case "Azul":
+                        ficha4.setBackground(Color.blue);
+                        ficha4.setIcon(barco);
+                        break;
+                    case "Amarillo":
+                        ficha4.setBackground(Color.yellow);
+                        ficha4.setIcon(perrito);
+                        break;
+                    case "Verde":
+                        ficha4.setBackground(Color.green);
+                        ficha4.setIcon(sombrero);
+                        break;
+                    default:
+                        break;
+                }
+                ficha4.setOpaque(true);
+                P.add(ficha4);
+            }
+        }
         P.add(ficha1);
         P.add(ficha2);
+
     }
 
     /**
@@ -73,6 +189,7 @@ public class Tablero extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 255, 204));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setForeground(java.awt.Color.green);
 
         javax.swing.GroupLayout PanelLayout = new javax.swing.GroupLayout(Panel);
         Panel.setLayout(PanelLayout);
@@ -176,23 +293,20 @@ public class Tablero extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(Panel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(F1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(F2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(211, 211, 211))
                     .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(174, 174, 174)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(174, 174, 174)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(X)
-                                    .addComponent(Y, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addComponent(F1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(F2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(X)
+                                .addComponent(Y, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -233,7 +347,7 @@ public class Tablero extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
         new JFXPanel();
-        String dd= new File("dados.mp3").toURI().toString();
+        String dd = new File("dados.mp3").toURI().toString();
         new MediaPlayer(new Media(dd)).play();
 
         d1 = (int) (Math.random() * 6) + 1;
