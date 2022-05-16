@@ -6,3 +6,8 @@ Avances:
   - Dados
   - Clase Casillas
   - Lista para el tablero
+  - Jugadores
+  - Movimiento de fichas
+  - Turnos
+  - Compra de propiedades
+  - 
