@@ -1,7 +1,7 @@
 # MonopolyLab
 Monopoly EST1
 
-Avances:
+Características:
   - Tablero
   - Dados
   - Clase Casillas
@@ -10,6 +10,7 @@ Avances:
   - Movimiento de fichas
   - Turnos
   - Compra de propiedades
+  - Hipoteca de propiedades
   
 
 DIAGRAMA UML:
