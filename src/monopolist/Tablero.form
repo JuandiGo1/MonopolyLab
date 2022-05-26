@@ -757,35 +757,21 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="lanzar" pref="352" max="32767" attributes="0"/>
-                                      <Group type="102" attributes="0">
-                                          <Component id="dado1" min="-2" pref="100" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="turnojugar" min="-2" pref="122" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="dado2" min="-2" pref="101" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Component id="Tot" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="info" alignment="1" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="F3" min="-2" pref="23" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="lanzar" pref="352" max="32767" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="dado1" min="-2" pref="100" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="F2" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="turnojugar" min="-2" pref="122" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="F1" min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Component id="dado2" min="-2" pref="101" max="-2" attributes="0"/>
                               </Group>
+                              <Component id="Tot" alignment="0" max="32767" attributes="0"/>
+                              <Component id="info" alignment="1" max="32767" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="quebrar" min="-2" pref="227" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="quebrar" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -830,42 +816,14 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="manejar" min="-2" pref="39" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="F2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="F1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="F3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="quebrar" min="-2" pref="39" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="quebrar" min="-2" pref="39" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="F2">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="F2"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="F2ActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="F1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="F1"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="F1ActionPerformed"/>
-          </Events>
-        </Component>
         <Container class="javax.swing.JPanel" name="jPanel3">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
@@ -899,7 +857,7 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="precio" min="-2" pref="27" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="alquiler" pref="125" max="32767" attributes="0"/>
+                      <Component id="alquiler" pref="124" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -1180,14 +1138,6 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
           </AuxValues>
-        </Component>
-        <Component class="javax.swing.JButton" name="F3">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="F2"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="F3ActionPerformed"/>
-          </Events>
         </Component>
       </SubComponents>
     </Container>

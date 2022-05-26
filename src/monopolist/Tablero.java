@@ -78,7 +78,12 @@ public class Tablero extends javax.swing.JFrame {
         Icon verd = new javax.swing.ImageIcon(getClass().getResource("/imagenes/Verde.png"));
 
         ficha1.setBounds(867, 667, 25, 25);
-        J1 = new Jugadores(Inicio.J1Name.getText(), DecidirTurno.turno[0], ficha1, 1, j1dinero);
+        if(!"".equals(Inicio.J1Name.getText())){
+            J1 = new Jugadores(Inicio.J1Name.getText(), DecidirTurno.turno[0], ficha1, 1, j1dinero);
+        }else{
+            J1 = new Jugadores("P1", DecidirTurno.turno[0], ficha1, 1, j1dinero);
+        }
+        
         J[0] = J1;
 
         j1name.setText(J1.nick);
@@ -113,7 +118,11 @@ public class Tablero extends javax.swing.JFrame {
         ficha1.setOpaque(false);
 
         ficha2.setBounds(867, 707, 25, 25);
-        J2 = new Jugadores(Inicio.J2Name.getText(), DecidirTurno.turno[1], ficha2, 2, j1dinero2);
+        if(!"".equals(Inicio.J2Name.getText())){
+            J2 = new Jugadores(Inicio.J2Name.getText(), DecidirTurno.turno[1], ficha2, 2, j1dinero2);
+        }else{
+            J2 = new Jugadores("P2", DecidirTurno.turno[1], ficha2, 2, j1dinero2);
+        }
         J[1] = J2;
         j2name.setText(J2.nick);
         String Select2 = Inicio.J2Ficha.getSelectedItem().toString();
@@ -145,7 +154,11 @@ public class Tablero extends javax.swing.JFrame {
 
         ficha2.setOpaque(false);
         if (Inicio.J3box.isSelected()) {
-            J3 = new Jugadores(Inicio.J3Name.getText(), DecidirTurno.turno[2], ficha3, 3, j1dinero3);
+            if(!"".equals(Inicio.J3Name.getText())){
+                J3 = new Jugadores(Inicio.J3Name.getText(), DecidirTurno.turno[2], ficha3, 3, j1dinero3);
+            }else{
+                J3 = new Jugadores("P3", DecidirTurno.turno[2], ficha3, 3, j1dinero3);
+            }
             J[2] = J3;
             ficha3.setBounds(907, 707, 25, 25);
             j3name.setText(J3.nick);
@@ -177,7 +190,11 @@ public class Tablero extends javax.swing.JFrame {
             }
         }
         if (Inicio.J4box.isSelected()) {
-            J4 = new Jugadores(Inicio.J4Name.getText(), DecidirTurno.turno[3], ficha4, 4, j1dinero4);
+            if(Inicio.J4Name.getText().isEmpty()==false){
+                J4 = new Jugadores(Inicio.J4Name.getText(), DecidirTurno.turno[3], ficha4, 4, j1dinero4);
+            }else{
+                J4 = new Jugadores("P4", DecidirTurno.turno[3], ficha4, 4, j1dinero4);
+            }
             J[3] = J4;
             ficha4.setBounds(907, 667, 25, 25);
 
@@ -354,8 +371,6 @@ public class Tablero extends javax.swing.JFrame {
         j1dinero = new javax.swing.JLabel();
         salir = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        F2 = new javax.swing.JButton();
-        F1 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         ProName = new javax.swing.JLabel();
         alquiler = new javax.swing.JLabel();
@@ -372,7 +387,6 @@ public class Tablero extends javax.swing.JFrame {
         Pagar = new javax.swing.JButton();
         manejar = new javax.swing.JButton();
         quebrar = new javax.swing.JButton();
-        F3 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         Historial = new javax.swing.JTextArea();
         infoj2 = new javax.swing.JPanel();
@@ -770,20 +784,6 @@ public class Tablero extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
-        F2.setText("F2");
-        F2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                F2ActionPerformed(evt);
-            }
-        });
-
-        F1.setText("F1");
-        F1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                F1ActionPerformed(evt);
-            }
-        });
-
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -821,7 +821,7 @@ public class Tablero extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(precio, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(alquiler, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addComponent(alquiler, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -923,13 +923,6 @@ public class Tablero extends javax.swing.JFrame {
             }
         });
 
-        F3.setText("F2");
-        F3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                F3ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -949,28 +942,18 @@ public class Tablero extends javax.swing.JFrame {
                             .addComponent(Pagar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 8, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(lanzar, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(lanzar, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(dado1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(turnojugar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(dado2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(Tot, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(15, 15, 15))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(F3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dado1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(F2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(turnojugar, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(F1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(quebrar, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(dado2, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Tot, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(15, 15, 15))
+                    .addComponent(quebrar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -1005,16 +988,8 @@ public class Tablero extends javax.swing.JFrame {
                     .addComponent(Pagar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(manejar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(F2)
-                            .addComponent(F1)
-                            .addComponent(F3)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(quebrar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(quebrar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -1881,19 +1856,6 @@ public class Tablero extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void F1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F1ActionPerformed
-        /* x = Integer.parseInt(X.getText());
-        y = Integer.parseInt(Y.getText());
-        ficha1.setLocation(x, y);*/
-        BuscarTurno(turnoac, J).casillaUbicado = 15;
-        Tab.MoverFicha(BuscarTurno(turnoac, J), 0, BuscarTurno(turnoac, J).NroJugador);
-    }//GEN-LAST:event_F1ActionPerformed
-
-    private void F2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F2ActionPerformed
-        BuscarTurno(turnoac, J).casillaUbicado = 5;
-        Tab.MoverFicha(BuscarTurno(turnoac, J), 0, BuscarTurno(turnoac, J).NroJugador);
-    }//GEN-LAST:event_F2ActionPerformed
-
     public static Jugadores BuscarTurno(int turno, Jugadores vector[]) {
 
         boolean encontrado = false;
@@ -2339,11 +2301,6 @@ public class Tablero extends javax.swing.JFrame {
 
     }//GEN-LAST:event_quebrarActionPerformed
 
-    private void F3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_F3ActionPerformed
-        BuscarTurno(turnoac, J).casillaUbicado = 25;
-        Tab.MoverFicha(BuscarTurno(turnoac, J), 0, BuscarTurno(turnoac, J).NroJugador);
-    }//GEN-LAST:event_F3ActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -2380,9 +2337,6 @@ public class Tablero extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton F1;
-    private javax.swing.JButton F2;
-    private javax.swing.JButton F3;
     public static javax.swing.JTextArea Historial;
     public static javax.swing.JButton Pagar;
     private javax.swing.JPanel Panel;

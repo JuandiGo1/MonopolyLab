@@ -1,0 +1,41 @@
+Salida,0,0,887,687,0,blanco
+Old Kent Road,60,2,780,687,1,marron
+Community chest,0,0,700,687,2,blanco
+Whitechaper road,60,4,622,687,3,marron
+Impuestos,0,200,545,687,4,blanco
+King Cross Station,200,0,466,687,5,blanco
+The Angel Islington,100,6,386,687,6,azulito
+Chance,0,0,308,687,7,blanco
+Euston Road,100,6,232,687,8,azulito
+Pentonville Road,120,8,155,687,9,azulito
+Carcel Visita,0,0,10,710,10,blanco
+Pall Mall,140,10,40,600,11,fucsia
+Electric Company,150,0,40,540,12,palido
+Whitehall,140,10,40,480,13,fucsia
+Northumrld Avenue,160,12,40,420,14,fucsia
+Marylebone Station,200,0,40,360,15,blanco
+Bow Street,180,14,40,297,16,naranja
+Community Chest,0,0,40,237,17,blanco
+Marlborough Street,180,14,40,177,18,naranja
+Vine Street,200,16,40,117,19,naranja
+Free Parking,0,0,55,30,20,blanco
+Strand,220,18,155,25,21,Color.red
+Chance,0,0,235,25,22,blanco
+Fleet Street,220,18,311,25,23,Color.red
+Trafalgar Square,240,20,391,25,24,Color.red
+Fenchurch Station,200,0,470,25,25,blanco
+Leicester Square,260,22,545,25,26,Color.yellow
+Coventry Street,260,22,625,25,27,Color.yellow
+Water Works,150,0,705,25,28,palido
+Piccadilly,280,24,780,25,29,Color.yellow
+Go To Jail,0,0,885,30,30,blanco
+Regent Street,300,26,895,115,31,verde
+Oxford Street,300,26,895,175,32,verde
+Community Chest,0,0,895,235,33,blanco
+Bond Street,320,28,895,295,34,verde
+Liverpool St station,200,0,895,355,35,blanco
+Chance,0,0,895,417,36,blanco
+Park Lane,350,35,895,477,37,azulOscuro
+Super Tax,0,100,895,537,38,blanco
+MyFair,400,50,895,597,39,azulOscuro
+Trampa,0,0,0,0,0,blanco

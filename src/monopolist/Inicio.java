@@ -121,6 +121,7 @@ public class Inicio extends javax.swing.JFrame {
         J2Ficha.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
         J2Ficha.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Rojo", "Azul", "Amarillo", "Verde" }));
         J2Ficha.setSelectedIndex(1);
+        J2Ficha.setEnabled(false);
         J2Ficha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 J2FichaActionPerformed(evt);
@@ -249,9 +250,8 @@ public class Inicio extends javax.swing.JFrame {
                     .addGroup(InicioLayout.createSequentialGroup()
                         .addComponent(J1box, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(21, 21, 21)
-                        .addComponent(J2box, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(J2box, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(8, 8, 8)
                 .addGroup(InicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(InicioLayout.createSequentialGroup()
                         .addComponent(J3box, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -295,7 +295,7 @@ public class Inicio extends javax.swing.JFrame {
     private void J3boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J3boxActionPerformed
         if (J3box.isSelected()) {
             J3Name.setEnabled(true);
-            J3Ficha.setEnabled(true);
+            
         } else {
             J3Name.setText("");
             J3Name.setEnabled(false);
@@ -306,7 +306,7 @@ public class Inicio extends javax.swing.JFrame {
     private void J4boxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_J4boxActionPerformed
         if (J4box.isSelected()) {
             J4Name.setEnabled(true);
-            J4Ficha.setEnabled(true);
+            
         } else {
             J4Name.setText("");
             J4Name.setEnabled(false);
@@ -320,8 +320,9 @@ public class Inicio extends javax.swing.JFrame {
         J2Ficha.setModel(model.getModel());
         J2Ficha.setSelectedIndex(0);
         J2Ficha.removeItem(J1Ficha.getSelectedItem());
-
+        
         J3Ficha.setSelectedIndex(0);
+        J2Ficha.setEnabled(true);
 
         active = true;
 
@@ -336,6 +337,9 @@ public class Inicio extends javax.swing.JFrame {
             J3Ficha.setSelectedIndex(0);
             J3Ficha.removeItem(J2Ficha.getSelectedItem());
             J3Ficha.removeItem(J1Ficha.getSelectedItem());
+            if(J3box.isSelected()){
+                J3Ficha.setEnabled(true);
+            }
             active = true;
 
         }
@@ -352,6 +356,9 @@ public class Inicio extends javax.swing.JFrame {
             J4Ficha.removeItem(J3Ficha.getSelectedItem());
             J4Ficha.removeItem(J2Ficha.getSelectedItem());
             J4Ficha.removeItem(J1Ficha.getSelectedItem());
+            if(J4box.isSelected()){
+                J4Ficha.setEnabled(true);
+            }
             active = true;
 
         }

@@ -301,11 +301,14 @@ public class DecidirTurno extends javax.swing.JFrame {
         int d1 = (int) (Math.random() * 6) + 1;
         int d2 = (int) (Math.random() * 6) + 1;
         int result = d1 + d2;
-        for (int k = 0; k < resultados.length; k++) {
+        for (int k = 0; k < players; k++) {
             if (result == resultados[k]) {
-                d1 = (int) (Math.random() * 6) + 1;
-                d2 = (int) (Math.random() * 6) + 1;
-                result = d1 + d2;
+                while (result == resultados[k]) {
+                    d1 = (int) (Math.random() * 6) + 1;
+                    d2 = (int) (Math.random() * 6) + 1;
+                    result = d1 + d2;
+                }
+
             }
 
         }
@@ -321,16 +324,33 @@ public class DecidirTurno extends javax.swing.JFrame {
 
         switch (turnoact) {
             case 1:
-                turnode.setText("Dados para " + Inicio.J1Name.getText());
+                if (!"".equals(Inicio.J1Name.getText())) {
+                    turnode.setText("Dados para " + Inicio.J1Name.getText());
+                } else {
+                    turnode.setText("Dados para P1");
+                }
                 break;
             case 2:
-                turnode.setText("Dados para " + Inicio.J2Name.getText());
+                if (!"".equals(Inicio.J2Name.getText())) {
+                    turnode.setText("Dados para " + Inicio.J2Name.getText());
+                } else {
+                    turnode.setText("Dados para P2");
+                }
                 break;
             case 3:
-                turnode.setText("Dados para " + Inicio.J3Name.getText());
+                if (!"".equals(Inicio.J3Name.getText())) {
+                    turnode.setText("Dados para " + Inicio.J3Name.getText());
+                } else {
+                    turnode.setText("Dados para P3");
+                }
                 break;
             case 4:
-                turnode.setText("Dados para " + Inicio.J4Name.getText());
+                if (!"".equals(Inicio.J4Name.getText())) {
+                    turnode.setText("Dados para " + Inicio.J4Name.getText());
+                } else {
+                    turnode.setText("Dados para P1");
+                }
+                    ;
                 break;
         }
 
@@ -407,7 +427,7 @@ public class DecidirTurno extends javax.swing.JFrame {
                     }
                 }
             }
-            
+
             for (int p = 0; p < resultados.length; p++) {
                 for (j = 0; j < comparacion.length; j++) {
                     if (resultados[p] == comparacion[j]) {

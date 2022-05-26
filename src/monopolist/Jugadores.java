@@ -78,7 +78,8 @@ public class Jugadores {
                 break;
         }
         Tablero.comprar.setEnabled(false);
-        Tablero.Historial.setText(Tablero.Historial.getText() + "\n" + this.nick + " fue privado de su libertad :(");
+        Tablero.Historial.setText(Tablero.Historial.getText() + "\n" + this.nick + " fue privado de su libertad :( \n Puede pagar $50 o sacar doble para ser libre");
+        
     }
 
     //Para saber cuantas propiedades tiene de un color (para casos como el de estaciones y servicios)

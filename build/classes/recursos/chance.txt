@@ -1,0 +1,21 @@
+Regalo de año nuevo cobra $200!;recibir;200;1
+Tus construcciones están mejorando, toma $150 del banco;recibir;150;2
+Impuesto por el servicio del gas, paga $15 al banco;dar;15;3
+Errores de calculo, el banco te devuelve $50;recibir;50;4
+Gástos en comida, pague $50;dar;50;5
+Has ganado un concurso de sopa de letras, cobra $100 de premio;recibir;100;6
+Robas una idea de la competencia, cobra $50;recibir;50;7
+El banco te paga un dividendo de $50;recibir;50;8
+Cuentas con suerte, puedes salir de la carcél gratis con esta carta;libre;0;9
+Arrestado por lavado de dinero, estas jodido, ¡A la carcel!;carcel;0;10
+Pagar impuestos pobres de $15;dar;15;11
+Tuviste un accidente y te toca pagar $50 por daños;dar;50;12
+Usted vendió sus acciones tecnológicas restantes, cobre $14;recibir;14;13
+Una mala jugada, debes pagarle $30 al banco;dar;30;14
+El banco decidió regalarte un bono de $10;recibir;10;15
+Ganaste un concurso del mejor jugador, tu premio es $45;recibir;45;16
+Debes pagar tus gastos, paga $50 para estar al día;dar;50;17
+Por suerte ganaste un sorteo de $100;recibir;100;18
+Te estafaron en un negocio y debes devolver la plata, son $40;dar;40;19
+Fuiste acusado de estafador/a, vas a la cárcel;carcel;0;20
+Avanza tres pasos;mover;3;21
