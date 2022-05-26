@@ -1,0 +1,109 @@
+@startuml
+Class Jugadores{
+    +Nick 
+    +Dinero = 1500
+    +Turno 
+    +Casillas Propiedades []
+    +CantPropiedades 
+    +Ficha
+    +VerDinero
+    +NroJugador
+    +Preso
+    +debe
+    +enApuros
+    +bancarrota
+    +selected
+    +salirGratis
+    +deuda
+
+    +Encarcelar()
+    +propiedasConjunto(Color colo)
+    +monopoli(Color colo, boolean aumentar)
+    +Endeudado(double deuda)
+    +bancarrota
+}
+Class Casillas{
+    +name
+    +ValVenta
+    +ValRenta
+    +posx
+    +posy
+    +Celda = lista 
+    +num
+    +color
+    +propietario
+    +hipotecada
+
+    +Hipotecar()
+    +Liberar()
+}
+Class ListaTablero{
+    +debeSacar
+    +chest
+    
+    + addNode(Casillas Casilla)
+    + Celda Buscar(Jugadores, boolean mostrar)
+    + BuscarPorNumer(num)
+    + BuscarPresionando(num)
+    + rentaEstaciones(Jugadores, Celda)
+    + MoverFicha(Jugadores, rdados,player)
+    + ComprarPropiedad(Jugadores)
+}
+Class ListaCartas{
+    +Nodo = Lista
+
+    +addNode(CartaSuerte carta)
+    +BuscarCarta(Nro, Jugadores)
+}
+Class CartasSuerte{
+    +descrip
+    +accion
+    +valor
+    +NroCarta
+
+    +CartaSuerte(String descrip,String accion,int valor,int NroCarta)
+}
+Class Tablero{
+    +Pintar
+    +Ficha1
+    +Ficha2
+    +Ficha3
+    +Ficha4
+    +turnoac = 1
+    +dobles=0
+    +Color marron
+    +Color azulito
+    +Color naranja
+    +Color fucsia
+    +Color azulOscuro
+    +Color verde 
+    +Jugador []
+    +ListaTablero
+    +ListaCartas Chance
+    +ListaCartas chest
+
+    +LeerArchivo(op)
+    +initComponents()
+    +BuscarTurno(turno, Jugador [])
+    +ilumSalirCarcel(NroJug,Color ilum)
+    -Lanzardados()
+    -Comprar()
+    -pasarturno()
+    -Tomarcarta()
+    -Pagar()
+    -Manejarpropiedades()
+    -Quebrar()
+}
+Class propiedades{
+
+
+    -salir()
+    -hipotecar()
+}
+Tablero "1" o-- ListaTablero
+Tablero "2*" o-- "4" Jugadores
+Tablero o-- ListaCartas
+Casillas o-- ListaTablero
+Tablero o-- CartasSuerte
+Tablero o-- propiedades
+@enduml
