@@ -10,7 +10,7 @@ Avances:
   - Movimiento de fichas
   - Turnos
   - Compra de propiedades
-  - 
+  
 
 DIAGRAMA UML:
 
