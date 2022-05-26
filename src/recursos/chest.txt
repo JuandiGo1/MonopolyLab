@@ -1,0 +1,20 @@
+Ve a la cárcel directamente;carcel;0;1
+La venta de tus acciones te produce $50;recibir;50;2
+Paga al hospital $100;dar;100;3
+Tu abuelo fallecio, cobras una herencia $100;recibir;100;4
+Recibe $100 por los intereses de tu plazo fijo;recibir;100;5
+Hacienda te devuelve $20;recibir;20;6
+Paga tu póliza de seguro 50;dar;50;7
+Recibiste un regalo de un desconocido por $200!;recibir;200;8
+El equipo de futbol al que le apostaste perdio! paga $20;dar;20;9
+Error de la banca a tu favor. recibe 200;recibir;200;10
+Recibes $25 como intereses de tus acciones preferenciales;recibir;25;11
+Paga una multa de $10 por pasar un semaforo en rojo;recibir;10;12
+Quedas libre de la carcel gratis;libre;0;13
+Paga la factura del médico $50;dar;50;14
+Has ganado el primer premio de belleza, recibe $10;recibir;10;15
+Patadita de la buena suerte! recibes $100;recibir;10;16
+
+  
+ 
+
