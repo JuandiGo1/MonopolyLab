@@ -1,5 +1,5 @@
 # MonopolyLab
-Monopoly EST1
+Monopoly Estructura de datos I
 
 Características:
   - Tablero
