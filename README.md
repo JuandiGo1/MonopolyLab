@@ -1,5 +1,8 @@
 # MonopolyLab
 Monopoly Estructura de datos I
+-JUAN MAESTRE
+- GABRIELA MORENO
+- CRISTIAN BERRIO
 
 Características:
   - Tablero
