@@ -1,6 +1,6 @@
 # MonopolyLab
 Monopoly Estructura de datos I
--JUAN MAESTRE
+- JUAN MAESTRE
 - GABRIELA MORENO
 - CRISTIAN BERRIO
 
